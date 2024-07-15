@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+import numpy as np
+def quad_model2(time):
+  a= float(input("Enter the values of a: "))
+  b= float(input("Enter the values of b: "))
+  c= float(input("Enter the values of c: "))
+  temp= a*(time**2)+b*time+c
+  return temp
+def main():
+  time_val = np.linspace(0, 10, 50)
+  temp_cal2 = quad_model2(time_val)
+  plt.plot(time_val, temp_cal2, label='user input variables')
+  plt.xlabel('Time')
+  plt.ylabel('Temperature')
+  plt.legend()
+  plt.title('Weather Modelling ')
+  plt.grid(True)
+  plt.show()
+if __name__ == '__main__':
+    main()
